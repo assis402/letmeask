@@ -30,11 +30,11 @@ export function Home() {
         if (roomCode.trim() === '') {
             return;
         }
-
+ 
         const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
         if (!roomRef.exists()){
-            alert('Room doest not exist.');
+            alert('Room does not exist.');
             return;
         }
 
